@@ -1,0 +1,34 @@
+use_frameworks!
+
+
+target 'TestCondition_Example' do
+  pod 'TestCondition', :path => '../'
+  target 'TestCondition_Tests' do
+    inherit! :search_paths
+  end
+end
+
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            if target.name == 'TestCondition'
+                
+                #'$(inherited)','-D','COCOAPODS' 这些是Pod默认添加的，所以重新设置的时候要带上。
+
+                if config.name == 'Debug'
+                    config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)','-D','COCOAPODS','-D','DEBUG']
+                end
+                if config.name == 'Release'
+                    config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)','-D','COCOAPODS','-D','RELEASE']
+                end
+                if config.name == 'Stage'
+                    config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)','-D','COCOAPODS','-D','STAGE']
+                end
+            end
+        end
+    end
+end
+
+
+

@@ -1,0 +1,16 @@
+PODS:
+  - TestCondition (0.1.0)
+
+DEPENDENCIES:
+  - TestCondition (from `../`)
+
+EXTERNAL SOURCES:
+  TestCondition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TestCondition: b838f5d984a9b56d93e4122e048a0eb12ca34d68
+
+PODFILE CHECKSUM: b9a4dfc17f815f77623c1b01ae838f175ecdc6f6
+
+COCOAPODS: 1.5.3

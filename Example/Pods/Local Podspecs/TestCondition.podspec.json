@@ -1,0 +1,22 @@
+{
+  "name": "TestCondition",
+  "version": "0.1.0",
+  "summary": "A short description of TestCondition.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yongpeng.zhu/TestCondition",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yongpeng.zhu": "yongpeng.zhu@nio.com"
+  },
+  "source": {
+    "git": "https://github.com/yongpeng.zhu/TestCondition.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "TestCondition/Classes/Entry.swift"
+}
